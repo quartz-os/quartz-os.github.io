@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Quartz OS]]></title>
+  <link href="http://quartz-os.github.io/atom.xml" rel="self"/>
+  <link href="http://quartz-os.github.io/"/>
+  <updated>2014-11-19T18:36:33-06:00</updated>
+  <id>http://quartz-os.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Spencer]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
