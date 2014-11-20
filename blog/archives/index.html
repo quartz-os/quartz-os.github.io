@@ -9,7 +9,8 @@
   <meta name="author" content="Michael Spencer">
 
   
-  <meta name="description" content=" Blog Archive Recent Posts ">
+  <meta name="description" content="Blog Archive 2014 Introduction and Initial Plans
+Nov 19 2014 Recent Posts Introduction and Initial Plans GitHub Repos Status updating... @quartz-os &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,6 +32,18 @@
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47662876-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -73,6 +86,19 @@
   
   <div id="blog-archives">
 
+
+
+  
+  <h2>2014</h2>
+
+<article>
+  
+<h1><a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a></h1>
+<time datetime="2014-11-19T18:48:41-06:00" pubdate><span class='month'>Nov</span> <span class='day'>19</span> <span class='year'>2014</span></time>
+
+
+</article>
+
 </div>
 
   
@@ -86,10 +112,52 @@
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a>
+      </li>
+    
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/quartz-os">@quartz-os</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'quartz-os',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/113262712329378697012?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
 
 
 
@@ -107,9 +175,30 @@
 </footer>
   
 
+<script type="text/javascript">
+      var disqus_shortname = 'quartzos';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 
