@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Quantum OS</title>
+  <title>Blog Archive - Quantum OS</title>
   <meta name="author" content="Quantum OS">
 
   
-  <meta name="description" content="Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s Material Design guidelines &hellip;">
+  <meta name="description" content="Blog Archive 2014 Introduction and Initial Plans
+Nov 19 2014 Recent Posts Introduction and Initial Plans GitHub Repos Status updating... @quantum-os &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://quantum-os.github.io">
+  <link rel="canonical" href="http://quantum-os.github.io/blog/archives">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Quantum OS" type="application/atom+xml">
@@ -75,81 +76,36 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-11-19T18:48:41-06:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time>
-        
-           | <a href="/blog/2014/11/introduction-and-initial-plans/#disqus_thread"
-             data-disqus-identifier="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/">Comments</a>
-        
-      </p>
+    <h1 class="entry-title">Blog Archive</h1>
     
   </header>
+  
+  <div id="blog-archives">
 
 
-  <div class="entry-content"><p>Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s <a href="http://google.com/design/">Material Design guidelines</a>. The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.</p>
 
-<p><strong>UPDATE</strong>: This project was originally named Quartz OS but has since been renamed to Quantum OS because of conflicts with the OS X graphics technologies.</p>
+  
+  <h2>2014</h2>
 
-<h3>The Desktop Shell</h3>
+<article>
+  
+<h1><a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a></h1>
+<time datetime="2014-11-19T18:48:41-06:00" pubdate><span class='month'>Nov</span> <span class='day'>19</span> <span class='year'>2014</span></time>
 
-<p>We plan to develop the desktop shell and applications primarily using Qt 5 and QML, which will allow us to build highly polished and dynamic user interfaces and will work well for implementing Material Design. If possible, we will build the desktop shell in as much QML as possible built on top of the QtCompositor API, which provides a Qt framework for building a Wayland compositor.</p>
 
-<p>We already have some working code with an experimental desktop layout:</p>
+</article>
 
-<p><img src="/images/desktop_layout_1.png"></p>
-
-<h3>Applications</h3>
-
-<p>Our application framework will be based upon a QML UI toolkit implementing Material Design. It is written completely from scratch, and does not use QtQuick Controls, and is not a fork or theme for the Ubuntu UI toolkit. The reason for this is that we want to be able to focus specifically on implementing Material Design, which has several unique features, such as the concept of elevation. We will most likely have a Qt/Gtk theme for existing apps, but the official recommendation will be writing new applications or porting existing applications to the Material Design framework. The API will be similar to that of other QML frameworks such as the Ubuntu UI toolkit, so it will not be too difficult porting existing apps.</p>
-
-<p>The UI framework itself will be cross-platform, just as Qt itself is, so apps written with it will run on OS X, Windows, or other Linux distributions. This plays well with the concept of Material Design, which aims to be a cross-platform design framework.</p>
-
-<p>We also plan to support web apps and treat them as nicely as possible. This will probably involve a simple wrapper that allows web apps to have their own icon and window with no browser chrome.</p>
-
-<p>The Material Design QML framework is well underway, as can be seen from this sample application:</p>
-
-<p><img src="/images/blueprint_1.png"></p>
-
-<h3>The Base Operating System</h3>
-
-<p>We plan to initially leverage an existing operating system, most likely Arch or Ubuntu. Arch is a strong possibility because of the simple packaging manager, lightweight base system, and the rolling release concept. Our goal is to base our work on the latest upstream versions available, with no patches or modifications, so our work will run on any base Linux distro that supports Wayland.</p>
-
-<p>We will also need to build a login manager and installer. Our plan is to write a theme for SDDM, which supports themes written in QML. We don&rsquo;t have any plans for an installer yet, as that will need to wait until a base OS is chosen.</p>
-
-<h3>The Development Team and Code</h3>
-
-<p>Currently the team consists of mainly just myself (<a href="https://plus.google.com/u/0/+MichaelSpencer">Michael Spencer</a>/<a href="https://github.com/iBeliever">@iBeliever</a>), though I am already getting some great design feedback and mockups from <a href="https://plus.google.com/u/0/+AndreaDelSarto88">Andrea Del Sarto</a>. Anyone who is interested in contributing code, design, feedback, or testing is welcome to contribute, though I plan to remain in control of project management to ensure that we stay focused on our goals. I am certainly open to suggestions and feedback, though!</p>
-
-<p>We are hosting our code on GitHub at <a href="https://github.com/quantum-os">https://github.com/quantum-os</a>, with the Material Design QML framework hosted at <a href="https://github.com/quantum-os/qml-material">https://github.com/quantum-os/qml-material</a>. You can also track our mockups <a href="https://github.com/quantum-os/mockups">here</a>, though because of the flexibility and power of QML, we often work directly in code versus designing mockups first.</p>
 </div>
-  
-  
 
-
-    </article>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -207,6 +163,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

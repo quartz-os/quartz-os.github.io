@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Quantum OS]]></title>
+  <link href="http://quantum-os.github.io/atom.xml" rel="self"/>
+  <link href="http://quantum-os.github.io/"/>
+  <updated>2014-11-22T10:17:26-06:00</updated>
+  <id>http://quantum-os.github.io/</id>
+  <author>
+    <name><![CDATA[Quantum OS]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction and Initial Plans]]></title>
+    <link href="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/"/>
+    <updated>2014-11-19T18:48:41-06:00</updated>
+    <id>http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans</id>
+    <content type="html"><![CDATA[<p>Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s <a href="http://google.com/design/">Material Design guidelines</a>. The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.</p>
+
+<p><strong>UPDATE</strong>: This project was originally named Quartz OS but has since been renamed to Quantum OS because of conflicts with the OS X graphics technologies.</p>
+
+<h3>The Desktop Shell</h3>
+
+<p>We plan to develop the desktop shell and applications primarily using Qt 5 and QML, which will allow us to build highly polished and dynamic user interfaces and will work well for implementing Material Design. If possible, we will build the desktop shell in as much QML as possible built on top of the QtCompositor API, which provides a Qt framework for building a Wayland compositor.</p>
+
+<p>We already have some working code with an experimental desktop layout:</p>
+
+<p><img src="http://quantum-os.github.io/images/desktop_layout_1.png"></p>
+
+<h3>Applications</h3>
+
+<p>Our application framework will be based upon a QML UI toolkit implementing Material Design. It is written completely from scratch, and does not use QtQuick Controls, and is not a fork or theme for the Ubuntu UI toolkit. The reason for this is that we want to be able to focus specifically on implementing Material Design, which has several unique features, such as the concept of elevation. We will most likely have a Qt/Gtk theme for existing apps, but the official recommendation will be writing new applications or porting existing applications to the Material Design framework. The API will be similar to that of other QML frameworks such as the Ubuntu UI toolkit, so it will not be too difficult porting existing apps.</p>
+
+<p>The UI framework itself will be cross-platform, just as Qt itself is, so apps written with it will run on OS X, Windows, or other Linux distributions. This plays well with the concept of Material Design, which aims to be a cross-platform design framework.</p>
+
+<p>We also plan to support web apps and treat them as nicely as possible. This will probably involve a simple wrapper that allows web apps to have their own icon and window with no browser chrome.</p>
+
+<p>The Material Design QML framework is well underway, as can be seen from this sample application:</p>
+
+<p><img src="http://quantum-os.github.io/images/blueprint_1.png"></p>
+
+<h3>The Base Operating System</h3>
+
+<p>We plan to initially leverage an existing operating system, most likely Arch or Ubuntu. Arch is a strong possibility because of the simple packaging manager, lightweight base system, and the rolling release concept. Our goal is to base our work on the latest upstream versions available, with no patches or modifications, so our work will run on any base Linux distro that supports Wayland.</p>
+
+<p>We will also need to build a login manager and installer. Our plan is to write a theme for SDDM, which supports themes written in QML. We don&rsquo;t have any plans for an installer yet, as that will need to wait until a base OS is chosen.</p>
+
+<h3>The Development Team and Code</h3>
+
+<p>Currently the team consists of mainly just myself (<a href="https://plus.google.com/u/0/+MichaelSpencer">Michael Spencer</a>/<a href="https://github.com/iBeliever">@iBeliever</a>), though I am already getting some great design feedback and mockups from <a href="https://plus.google.com/u/0/+AndreaDelSarto88">Andrea Del Sarto</a>. Anyone who is interested in contributing code, design, feedback, or testing is welcome to contribute, though I plan to remain in control of project management to ensure that we stay focused on our goals. I am certainly open to suggestions and feedback, though!</p>
+
+<p>We are hosting our code on GitHub at <a href="https://github.com/quantum-os">https://github.com/quantum-os</a>, with the Material Design QML framework hosted at <a href="https://github.com/quantum-os/qml-material">https://github.com/quantum-os/qml-material</a>. You can also track our mockups <a href="https://github.com/quantum-os/mockups">here</a>, though because of the flexibility and power of QML, we often work directly in code versus designing mockups first.</p>
+]]></content>
+  </entry>
+  
+</feed>
