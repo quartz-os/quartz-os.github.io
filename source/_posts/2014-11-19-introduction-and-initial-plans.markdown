@@ -5,7 +5,7 @@ date: 2014-11-19 18:48:41 -0600
 comments: true
 categories:
 ---
-Welcome to Quartz OS! We are working on developing an operating system based upon Linux which conforms to Google's [Material Design guidelines](google.com/design). The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.
+Welcome to Quartz OS! We are working on developing an operating system based upon Linux which conforms to Google's [Material Design guidelines](//google.com/design). The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.
 
 ### The Desktop Shell
 
