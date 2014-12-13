@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Frequently Asked Questions - Quantum OS</title>
+  <meta name="author" content="Quantum OS">
+
+  
+  <meta name="description" content="Frequently Asked Questions Dec 13th, 2014 5:00 pm Is this only just a bunch of mockups or is it a real working OS? Yes! We have real working code &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://quantum-os.github.io/faq">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Quantum OS" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47662876-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Quantum OS</a></h1>
+  
+    <h2>Material Design + Linux = Awesome</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:quantum-os.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/faq">FAQ</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Frequently Asked Questions</h1>
+    <p class="meta">
+
+
+
+
+<time class='entry-date' datetime='2014-12-13T17:00:00-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:00 pm</span></time></p>
+  </header>
+  
+  <h3>Is this only just a bunch of mockups or is it a real working OS?</h3>
+
+<p>Yes! We have real working code and lots of progress is going on. Check out our repositories on GitHub
+at <a href="https://github.com/quantum-os.">https://github.com/quantum-os.</a></p>
+
+<h3>You&rsquo;re building yet another desktop shell! Why not just theme KDE?</h3>
+
+<p>We&rsquo;re not building an entire desktop shell from scratch - we&rsquo;re building a Wayland compositor
+using the QtCompositor APIs, which takes care of most of the work for window management and
+compositing. It&rsquo;s so easy that a working compositor can be built in 9 files or less. We&rsquo;ll still
+have to implement the standard indicators and app launching, but we believe that by focusing just
+on wayland and not offering a ton of theming and configuration options, we can build a very small
+desktop shell that works well and has very clean code.</p>
+
+<h3>Why build an entirely new OS?</h3>
+
+<p>First of all, we aren&rsquo;t. We will be building on top of an existing Linux distro, Arch Linux.</p>
+
+<p>However, to work well for the typical computer user, we&rsquo;ll be focusing on an easy-to-use system,
+with stable, reproducable system installs and atomic upgrades. This will most likely be done using
+<a href="https://wiki.gnome.org/action/show/Projects/OSTree">OSTree</a>, which is like Git for operating
+systems.</p>
+
+<p>While this will at least initially limit what you&rsquo;ll be able to install on the system, our desktop
+shell and other software should work well on any Linux distro that offers the latest packages.</p>
+
+<h3>When is it going to be released?</h3>
+
+<p>February 30 :)</p>
+
+<p>Seriously, though, we&rsquo;ll release it when it&rsquo;s ready, whenever that will be. As work progresses,
+we&rsquo;ll release instructions for installing packages on top of Arch Linux and also instructions for
+installing via OSTree on top of your current system so you can switch back and fourth without having
+to make a full install to a separate partition.</p>
+
+<p>Then, finally, we&rsquo;ll release ISOs to install the operating system in a VM or on an actual computer,
+once we have our installer finished.</p>
+
+<h3>Is it going to be a GNU free distro?</h3>
+
+<p>Our goal is not to be a free-software distro; if you want that, install our apps, shell, and login
+screen on another distro. Our goal is to be the best possible operating system for the typical
+computing user. So, if that means supporting non-free software such as drivers, than we will
+support non-free software. And that includes supporting an appstore that supports selling
+proprietary software (if we ever get to that point).</p>
+
+<p>My goal for the OS itself is to focus on an ellegent user experience for the typical computing user.
+This may limit its use for certain use cases (for example, if we use OSTree), or may require that
+we support non-free software. It certainly won&rsquo;t please everyone. If you don&rsquo;t like the OS itself,
+go find your own distro and install our packages on top of it.﻿</p>
+
+<p>I&rsquo;m not developing this operating system to please everyone. I&rsquo;m developing it as a hobby project
+to fullfill a list of requirements that I&rsquo;ve put forth, and being an ideal distro that doesn&rsquo;t
+work for users is not one of them.﻿</p>
+
+<h3>Why don&rsquo;t you use a bottom bar, like Windows or Chrome OS?</h3>
+
+<p>There have been several mockups shared with our Google+ community which have a bottom bar, much
+like Chrome OS, and these mockups have generated much interest. Unfortunately, we will not be
+considering actually developing a layout with a Chrome OS-like bottom bar, simply because we are
+already following a similar design language (Material Design), and we do not want Quantum OS to be
+an exact clone of Chrome OS. In the future, it might be added as a secondary option, but it will
+never become the default.</p>
+
+<h3>So, you&rsquo;re just another person/project crazy about all things Google and Material Design in particular.</h3>
+
+<p>No. I (Michael Spencer, the project manager and lead dev) have been planning on developing an
+operating system for several years now, and have been working on ideas for the OS and reading up
+about people&rsquo;s thoughts about Linux Desktops in genernal. I actually had started to develop my own
+UI style somewhat similar to the Bootstrap web framework, but then Google announced Material Design
+and I decided just to use that as Material Design looked really nice and it obviously would get
+a lot of support and interest since it came from a big company like Google.</p>
+
+<h3>But you&rsquo;re using Google apps!</h3>
+
+<p>No. Those are just icons and examples used in the mockups and prototypes because we don&rsquo;t have our
+own apps and icon theme yet. We won&rsquo;t be actually using Google&rsquo;s apps in the operating system,
+though they will probably be supported via Chrome.</p>
+
+<h3>You really plan to build all the apps yourself?</h3>
+
+<p>We&rsquo;ll work with other projects to support existing Gtk/Qt apps using a Material Design theme, but,
+as with any design guidelines, the best apps will be those built to follow the guidelines. So, we
+will build a few core apps ourselves and promote our Material Design framework for building native apps,
+along with supporting web apps via Google&rsquo;s Polymer web framework.</p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-13T17:00:00-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:00 pm</span></time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://quantum-os.github.io/faq/index.html" data-via="" data-counturl="http://quantum-os.github.io/faq/index.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/quantum-os">@quantum-os</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'quantum-os',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/113262712329378697012?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - <a href="https://plus.google.com/113262712329378697012" rel="publisher">Quantum OS</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'quartzos';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://quantum-os.github.io/faq/index.html';
+        var disqus_url = 'http://quantum-os.github.io/faq/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
