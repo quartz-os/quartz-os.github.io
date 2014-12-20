@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Introduction and Initial Plans - Quantum OS</title>
+  <title>Weekly Status Update - Quantum OS</title>
   <meta name="author" content="Quantum OS">
 
   
-  <meta name="description" content="Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s Material Design guidelines &hellip;">
+  <meta name="description" content="We'lll be starting weekly status updates to share progress on the various components of Quantum OS. QML Material 21 commits where made to our &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans">
+  <link rel="canonical" href="http://quantum-os.github.io/blog/2014/12/weekly-status-update">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Quantum OS" type="application/atom+xml">
@@ -81,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Introduction and Initial Plans</h1>
+      <h1 class="entry-title">Weekly Status Update</h1>
     
     
       <p class="meta">
@@ -90,7 +90,7 @@
 
 
 
-<time class='entry-date' datetime='2014-11-19T18:48:41-06:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time>
+<time class='entry-date' datetime='2014-12-19T19:55:59-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://quantum-os.github.io">Comments</a>
@@ -100,41 +100,81 @@
   </header>
 
 
-<div class="entry-content"><p>Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s <a href="http://google.com/design/">Material Design guidelines</a>. The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.</p>
+<div class="entry-content"><p>We&#8217;lll be starting weekly status updates to share progress on the various components of Quantum OS.</p>
 
-<p><strong>UPDATE</strong>: This project was originally named Quartz OS but has since been renamed to Quantum OS because of conflicts with the OS X graphics technologies.</p>
+<h3>QML Material</h3>
 
-<h3>The Desktop Shell</h3>
+<p>21 commits where made to our Material Design framework during the past week. The following features
+were implemented:</p>
 
-<p>We plan to develop the desktop shell and applications primarily using Qt 5 and QML, which will allow us to build highly polished and dynamic user interfaces and will work well for implementing Material Design. If possible, we will build the desktop shell in as much QML as possible built on top of the QtCompositor API, which provides a Qt framework for building a Wayland compositor.</p>
+<ul>
+<li>Implement the Switch control and update the design to match Material Design [<a href="https://github.com/boghison">@boghison</a>,<a href="https://github.com/iBeliever">@iBeliever</a>]</li>
+<li>Switch to GitFlow, and set up a CONTRIBUTING.md document [<a href="https://github.com/iBeliever">@iBeliever</a>]</li>
+<li>Load more of the Roboto fonts [<a href="https://github.com/glenfordwilliams">@glenfordwilliams</a>]</li>
+<li>Initial work on a component demo app [<a href="https://github.com/iBeliever">@iBeliever</a>]
 
-<p>We already have some working code with an experimental desktop layout:</p>
+<ul>
+<li>Initial demos cover the Button, Switch, Icon, and Progress Bar components</li>
+</ul>
+</li>
+<li>Improvements to the Snackbar component [<a href="https://github.com/boghison">@boghison</a>]</li>
+</ul>
 
-<p><img src="/images/desktop_layout_1.png"></p>
 
-<h3>Applications</h3>
+<p>Ongoing work includes:</p>
 
-<p>Our application framework will be based upon a QML UI toolkit implementing Material Design. It is written completely from scratch, and does not use QtQuick Controls, and is not a fork or theme for the Ubuntu UI toolkit. The reason for this is that we want to be able to focus specifically on implementing Material Design, which has several unique features, such as the concept of elevation. We will most likely have a Qt/Gtk theme for existing apps, but the official recommendation will be writing new applications or porting existing applications to the Material Design framework. The API will be similar to that of other QML frameworks such as the Ubuntu UI toolkit, so it will not be too difficult porting existing apps.</p>
+<ul>
+<li>Migrating to QtQuick.Controls</li>
+<li>Rewriting the PageStack code to use QtQuick.Controls and sort out the way transitions, etc are handled [<a href="https://github.com/quantum-os/qml-material/issues/36">#36</a>, <a href="https://github.com/quantum-os/qml-material/issues/37">#37</a>]</li>
+<li>Investigating how to handle the various styles of the Robot font [<a href="https://github.com/quantum-os/qml-material/issues/46">#46</a>]</li>
+</ul>
 
-<p>The UI framework itself will be cross-platform, just as Qt itself is, so apps written with it will run on OS X, Windows, or other Linux distributions. This plays well with the concept of Material Design, which aims to be a cross-platform design framework.</p>
 
-<p>We also plan to support web apps and treat them as nicely as possible. This will probably involve a simple wrapper that allows web apps to have their own icon and window with no browser chrome.</p>
+<p>Thanks to all the developers who have contributed code to the project this week and in past weeks!
+I&rsquo;d like to especially mention <a href="https://github.com/geiseri">@geiseri</a>  who has been helping us migrate to QtQuick.Controls along
+with contributing other great feedback and discussion about how we&rsquo;re implementing various features.</p>
 
-<p>The Material Design QML framework is well underway, as can be seen from this sample application:</p>
+<h3>Quantum Shell</h3>
 
-<p><img src="/images/blueprint_1.png"></p>
+<p>No commits landed in the main branch for Quantum Shell, as discussion was ongoing and any work was made
+to separate repositories or branches. The following items were discussed or worked on:</p>
 
-<h3>The Base Operating System</h3>
+<ul>
+<li>Implementing the Music indicator [<a href="https://github.com/quantum-os/quantum-shell/issues/14">#14</a>, <a href="https://github.com/quantum-os/quantum-shell/issues/16">#16</a>]</li>
+<li>Implementing the Network indicator [<a href="https://github.com/quantum-os/quantum-shell/issues/17">#17</a>]</li>
+</ul>
 
-<p>We plan to initially leverage an existing operating system, most likely Arch or Ubuntu. Arch is a strong possibility because of the simple packaging manager, lightweight base system, and the rolling release concept. Our goal is to base our work on the latest upstream versions available, with no patches or modifications, so our work will run on any base Linux distro that supports Wayland.</p>
 
-<p>We will also need to build a login manager and installer. Our plan is to write a theme for SDDM, which supports themes written in QML. We don&rsquo;t have any plans for an installer yet, as that will need to wait until a base OS is chosen.</p>
+<p>Planning also continues on different designs and layouts and deciding what features to implement.</p>
 
-<h3>The Development Team and Code</h3>
+<h3>SDDM Theme</h3>
 
-<p>Currently the team consists of mainly just myself (<a href="https://plus.google.com/u/0/+MichaelSpencer">Michael Spencer</a>/<a href="https://github.com/iBeliever">@iBeliever</a>), though I am already getting some great design feedback and mockups from <a href="https://plus.google.com/u/0/+AndreaDelSarto88">Andrea Del Sarto</a>. Anyone who is interested in contributing code, design, feedback, or testing is welcome to contribute, though I plan to remain in control of project management to ensure that we stay focused on our goals. I am certainly open to suggestions and feedback, though!</p>
+<p>Not much happening here, as the focus during the past week has been on other comments. However, <a href="https://github.com/boghison">@boghison</a> did turn the initial prototype into a working SDDM theme, which is awesome.</p>
 
-<p>We are hosting our code on GitHub at <a href="https://github.com/quantum-os">https://github.com/quantum-os</a>, with the Material Design QML framework hosted at <a href="https://github.com/quantum-os/qml-material">https://github.com/quantum-os/qml-material</a>. You can also track our mockups <a href="https://github.com/quantum-os/mockups">here</a>, though because of the flexibility and power of QML, we often work directly in code versus designing mockups first.</p>
+<h3>General OS progress</h3>
+
+<p>A large part of my time this week was spent on the following items:</p>
+
+<ul>
+<li>Trying to get QtCompositor compiled and working on Arch Linux, which will be the base for our OS</li>
+<li>Studying and learning how to use OSTree, which will be the distribution/release technology used in Quantum OS</li>
+</ul>
+
+
+<p>Other ongoing issues include:</p>
+
+<ul>
+<li>Picking a new name. With the majority of my time spent on other tasks, I have not spent much time on this. I have several names to research in the US trademark databases and perform general internet seaches on. Currently, my favorite candidate is Papyros, as a modified version of papyrus, an anchient form of paper, which fits with Material Design and the concept of paper used.</li>
+<li>Getting a list of packages we will need to ship together</li>
+<li>Designing various aspects of the desktop shell, applications, and OS in general</li>
+</ul>
+
+
+<p>In closing, we&rsquo;re making good progress towards building an awesome OS! Thanks to everyone interested in the project and who have offered support, ideas and suggestions, design feedback, or code contributions. That&rsquo;s the power of open source!</p>
+
+<p>Christmas is coming up next week, so I may not do a progress report next Friday and will probably not make a whole lot of progress on Quantum OS work as well. I&rsquo;ll be back in full force the next week, though!</p>
+
+<p>Have a blessed Christmas and a happy New Year!</p>
 </div>
 
 
@@ -150,15 +190,21 @@
 
 
 
-<time class='entry-date' datetime='2014-11-19T18:48:41-06:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time>
+<time class='entry-date' datetime='2014-12-19T19:55:59-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/weekly-status/'>weekly-status</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/" data-via="" data-counturl="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://quantum-os.github.io/blog/2014/12/weekly-status-update/" data-via="" data-counturl="http://quantum-os.github.io/blog/2014/12/weekly-status-update/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -169,8 +215,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/11/introduction-and-initial-plans/" title="Previous Post: Introduction and Initial Plans">&laquo; Introduction and Initial Plans</a>
       
-        <a class="basic-alignment right" href="/blog/2014/12/weekly-status-update/" title="Next Post: Weekly Status Update">Weekly Status Update &raquo;</a>
       
     </p>
   </footer>
@@ -262,8 +308,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/';
-        var disqus_url = 'http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/';
+        var disqus_identifier = 'http://quantum-os.github.io/blog/2014/12/weekly-status-update/';
+        var disqus_url = 'http://quantum-os.github.io/blog/2014/12/weekly-status-update/';
         var disqus_script = 'embed.js';
       
     (function () {

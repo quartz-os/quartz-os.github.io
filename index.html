@@ -9,7 +9,7 @@
   <meta name="author" content="Quantum OS">
 
   
-  <meta name="description" content="Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s Material Design guidelines &hellip;">
+  <meta name="description" content="We'lll be starting weekly status updates to share progress on the various components of Quantum OS. QML Material 21 commits where made to our &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,112 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/weekly-status-update/">Weekly Status Update</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-19T19:55:59-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
+        
+           | <a href="/blog/2014/12/weekly-status-update/#disqus_thread"
+             data-disqus-identifier="http://quantum-os.github.io/blog/2014/12/weekly-status-update/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&#8217;lll be starting weekly status updates to share progress on the various components of Quantum OS.</p>
+
+<h3>QML Material</h3>
+
+<p>21 commits where made to our Material Design framework during the past week. The following features
+were implemented:</p>
+
+<ul>
+<li>Implement the Switch control and update the design to match Material Design [<a href="https://github.com/boghison">@boghison</a>,<a href="https://github.com/iBeliever">@iBeliever</a>]</li>
+<li>Switch to GitFlow, and set up a CONTRIBUTING.md document [<a href="https://github.com/iBeliever">@iBeliever</a>]</li>
+<li>Load more of the Roboto fonts [<a href="https://github.com/glenfordwilliams">@glenfordwilliams</a>]</li>
+<li>Initial work on a component demo app [<a href="https://github.com/iBeliever">@iBeliever</a>]
+
+<ul>
+<li>Initial demos cover the Button, Switch, Icon, and Progress Bar components</li>
+</ul>
+</li>
+<li>Improvements to the Snackbar component [<a href="https://github.com/boghison">@boghison</a>]</li>
+</ul>
+
+
+<p>Ongoing work includes:</p>
+
+<ul>
+<li>Migrating to QtQuick.Controls</li>
+<li>Rewriting the PageStack code to use QtQuick.Controls and sort out the way transitions, etc are handled [<a href="https://github.com/quantum-os/qml-material/issues/36">#36</a>, <a href="https://github.com/quantum-os/qml-material/issues/37">#37</a>]</li>
+<li>Investigating how to handle the various styles of the Robot font [<a href="https://github.com/quantum-os/qml-material/issues/46">#46</a>]</li>
+</ul>
+
+
+<p>Thanks to all the developers who have contributed code to the project this week and in past weeks!
+I&rsquo;d like to especially mention <a href="https://github.com/geiseri">@geiseri</a>  who has been helping us migrate to QtQuick.Controls along
+with contributing other great feedback and discussion about how we&rsquo;re implementing various features.</p>
+
+<h3>Quantum Shell</h3>
+
+<p>No commits landed in the main branch for Quantum Shell, as discussion was ongoing and any work was made
+to separate repositories or branches. The following items were discussed or worked on:</p>
+
+<ul>
+<li>Implementing the Music indicator [<a href="https://github.com/quantum-os/quantum-shell/issues/14">#14</a>, <a href="https://github.com/quantum-os/quantum-shell/issues/16">#16</a>]</li>
+<li>Implementing the Network indicator [<a href="https://github.com/quantum-os/quantum-shell/issues/17">#17</a>]</li>
+</ul>
+
+
+<p>Planning also continues on different designs and layouts and deciding what features to implement.</p>
+
+<h3>SDDM Theme</h3>
+
+<p>Not much happening here, as the focus during the past week has been on other comments. However, <a href="https://github.com/boghison">@boghison</a> did turn the initial prototype into a working SDDM theme, which is awesome.</p>
+
+<h3>General OS progress</h3>
+
+<p>A large part of my time this week was spent on the following items:</p>
+
+<ul>
+<li>Trying to get QtCompositor compiled and working on Arch Linux, which will be the base for our OS</li>
+<li>Studying and learning how to use OSTree, which will be the distribution/release technology used in Quantum OS</li>
+</ul>
+
+
+<p>Other ongoing issues include:</p>
+
+<ul>
+<li>Picking a new name. With the majority of my time spent on other tasks, I have not spent much time on this. I have several names to research in the US trademark databases and perform general internet seaches on. Currently, my favorite candidate is Papyros, as a modified version of papyrus, an anchient form of paper, which fits with Material Design and the concept of paper used.</li>
+<li>Getting a list of packages we will need to ship together</li>
+<li>Designing various aspects of the desktop shell, applications, and OS in general</li>
+</ul>
+
+
+<p>In closing, we&rsquo;re making good progress towards building an awesome OS! Thanks to everyone interested in the project and who have offered support, ideas and suggestions, design feedback, or code contributions. That&rsquo;s the power of open source!</p>
+
+<p>Christmas is coming up next week, so I may not do a progress report next Friday and will probably not make a whole lot of progress on Quantum OS work as well. I&rsquo;ll be back in full force the next week, though!</p>
+
+<p>Have a blessed Christmas and a happy New Year!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -156,6 +262,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/weekly-status-update/">Weekly Status Update</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/11/introduction-and-initial-plans/">Introduction and Initial Plans</a>
