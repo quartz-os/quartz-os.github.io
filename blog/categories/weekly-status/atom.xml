@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Weekly-status | Quantum OS]]></title>
-  <link href="http://quantum-os.github.io/blog/categories/weekly-status/atom.xml" rel="self"/>
-  <link href="http://quantum-os.github.io/"/>
-  <updated>2014-12-19T20:35:07-06:00</updated>
-  <id>http://quantum-os.github.io/</id>
+  <title><![CDATA[Category: Weekly-status | Papyros]]></title>
+  <link href="http://papyros.io/blog/categories/weekly-status/atom.xml" rel="self"/>
+  <link href="http://papyros.io/"/>
+  <updated>2015-01-07T09:36:10-06:00</updated>
+  <id>http://papyros.io/</id>
   <author>
-    <name><![CDATA[Quantum OS]]></name>
+    <name><![CDATA[Papyros]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weekly Status Update]]></title>
-    <link href="http://quantum-os.github.io/blog/2014/12/weekly-status-update/"/>
+    <link href="http://papyros.io/blog/2014/12/weekly-status-update/"/>
     <updated>2014-12-19T19:55:59-06:00</updated>
-    <id>http://quantum-os.github.io/blog/2014/12/weekly-status-update</id>
+    <id>http://papyros.io/blog/2014/12/weekly-status-update</id>
     <content type="html"><![CDATA[<p>We&#8217;lll be starting weekly status updates to share progress on the various components of Quantum OS.</p>
 
 <h3>QML Material</h3>

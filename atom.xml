@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Quantum OS]]></title>
-  <link href="http://quantum-os.github.io/atom.xml" rel="self"/>
-  <link href="http://quantum-os.github.io/"/>
-  <updated>2014-12-19T20:35:07-06:00</updated>
-  <id>http://quantum-os.github.io/</id>
+  <title><![CDATA[Papyros]]></title>
+  <link href="http://papyros.io/atom.xml" rel="self"/>
+  <link href="http://papyros.io/"/>
+  <updated>2015-01-07T09:36:10-06:00</updated>
+  <id>http://papyros.io/</id>
   <author>
-    <name><![CDATA[Quantum OS]]></name>
+    <name><![CDATA[Papyros]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weekly Status Update]]></title>
-    <link href="http://quantum-os.github.io/blog/2014/12/weekly-status-update/"/>
+    <link href="http://papyros.io/blog/2014/12/weekly-status-update/"/>
     <updated>2014-12-19T19:55:59-06:00</updated>
-    <id>http://quantum-os.github.io/blog/2014/12/weekly-status-update</id>
+    <id>http://papyros.io/blog/2014/12/weekly-status-update</id>
     <content type="html"><![CDATA[<p>We&#8217;lll be starting weekly status updates to share progress on the various components of Quantum OS.</p>
 
 <h3>QML Material</h3>
@@ -100,9 +100,9 @@ to separate repositories or branches. The following items were discussed or work
   
   <entry>
     <title type="html"><![CDATA[Introduction and Initial Plans]]></title>
-    <link href="http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans/"/>
+    <link href="http://papyros.io/blog/2014/11/introduction-and-initial-plans/"/>
     <updated>2014-11-19T18:48:41-06:00</updated>
-    <id>http://quantum-os.github.io/blog/2014/11/introduction-and-initial-plans</id>
+    <id>http://papyros.io/blog/2014/11/introduction-and-initial-plans</id>
     <content type="html"><![CDATA[<p>Welcome to Quantum OS! We are working on developing an operating system based upon Linux which conforms to Google&rsquo;s <a href="http://google.com/design/">Material Design guidelines</a>. The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.</p>
 
 <p><strong>UPDATE</strong>: This project was originally named Quartz OS but has since been renamed to Quantum OS because of conflicts with the OS X graphics technologies.</p>
@@ -113,7 +113,7 @@ to separate repositories or branches. The following items were discussed or work
 
 <p>We already have some working code with an experimental desktop layout:</p>
 
-<p><img src="http://quantum-os.github.io/images/desktop_layout_1.png"></p>
+<p><img src="http://papyros.io/images/desktop_layout_1.png"></p>
 
 <h3>Applications</h3>
 
@@ -125,7 +125,7 @@ to separate repositories or branches. The following items were discussed or work
 
 <p>The Material Design QML framework is well underway, as can be seen from this sample application:</p>
 
-<p><img src="http://quantum-os.github.io/images/blueprint_1.png"></p>
+<p><img src="http://papyros.io/images/blueprint_1.png"></p>
 
 <h3>The Base Operating System</h3>
 
