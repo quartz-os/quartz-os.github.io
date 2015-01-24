@@ -1,0 +1,22 @@
+{
+  "name": "Papyros",
+  "version": "0.0.1",
+  "homepage": "https://github.com/VirusKA/papyros.github.io",
+  "authors": [
+    "VirusKA <devaprise@outlook.com>"
+  ],
+  "description": "Papyros: The MAterial Design Desktop",
+  "main": "index.html",
+  "keywords": [
+    "Material",
+    "Design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
