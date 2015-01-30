@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Introduction and Initial Plans</title>
+  <meta name="description" content="Welcome to Papyros! We are working on developing an operating system based upon Linux which conforms to Google’s Material Design guidelines. The focus will b...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://papyros.io/2014/11/19/introduction-and-initial-plans.html">
+  <link rel="alternate" type="application/rss+xml" title="Papyros" href="http://papyros.io/feed.xml" />
+
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-47662876-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Papyros</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/faq.html">Frequently Asked Questions</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Introduction and Initial Plans</h1>
+    <p class="post-meta">Nov 19, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <p>Welcome to Papyros! We are working on developing an operating system based upon Linux which conforms to Google’s <a href="http://google.com/design/">Material Design guidelines</a>. The focus will be on creating a stable and easy-to-use operating system with a heavy emphasis on well-thought-out design.</p>
+
+<p><strong>UPDATE:</strong> Quantum OS has been renamed to Papyros to avoid trademark issues.</p>
+
+<h3 id="the-desktop-shell">The Desktop Shell</h3>
+
+<p>We plan to develop the desktop shell and applications primarily using Qt 5 and QML, which will allow us to build highly polished and dynamic user interfaces and will work well for implementing Material Design. If possible, we will build the desktop shell in as much QML as possible built on top of the QtCompositor API, which provides a Qt framework for building a Wayland compositor.</p>
+
+<p>We already have some working code with an experimental desktop layout:</p>
+
+<p><img src="/images/desktop_layout_1.png" /></p>
+
+<h3 id="applications">Applications</h3>
+
+<p>Our application framework will be based upon a QML UI toolkit implementing Material Design. It is written completely from scratch, and does not use QtQuick Controls, and is not a fork or theme for the Ubuntu UI toolkit. The reason for this is that we want to be able to focus specifically on implementing Material Design, which has several unique features, such as the concept of elevation. We will most likely have a Qt/Gtk theme for existing apps, but the official recommendation will be writing new applications or porting existing applications to the Material Design framework. The API will be similar to that of other QML frameworks such as the Ubuntu UI toolkit, so it will not be too difficult porting existing apps.</p>
+
+<p>The UI framework itself will be cross-platform, just as Qt itself is, so apps written with it will run on OS X, Windows, or other Linux distributions. This plays well with the concept of Material Design, which aims to be a cross-platform design framework.</p>
+
+<p>We also plan to support web apps and treat them as nicely as possible. This will probably involve a simple wrapper that allows web apps to have their own icon and window with no browser chrome.</p>
+
+<p>The Material Design QML framework is well underway, as can be seen from this sample application:</p>
+
+<p><img src="/images/blueprint_1.png" /></p>
+
+<h3 id="the-base-operating-system">The Base Operating System</h3>
+
+<p>We plan to initially leverage an existing operating system, most likely Arch or Ubuntu. Arch is a strong possibility because of the simple packaging manager, lightweight base system, and the rolling release concept. Our goal is to base our work on the latest upstream versions available, with no patches or modifications, so our work will run on any base Linux distro that supports Wayland.</p>
+
+<p>We will also need to build a login manager and installer. Our plan is to write a theme for SDDM, which supports themes written in QML. We don’t have any plans for an installer yet, as that will need to wait until a base OS is chosen.</p>
+
+<h3 id="the-development-team-and-code">The Development Team and Code</h3>
+
+<p>Currently the team consists of mainly just myself (<a href="https://plus.google.com/u/0/+MichaelSpencer">Michael Spencer</a>/<a href="https://github.com/iBeliever">@iBeliever</a>), though I am already getting some great design feedback and mockups from <a href="https://plus.google.com/u/0/+AndreaDelSarto88">Andrea Del Sarto</a>. Anyone who is interested in contributing code, design, feedback, or testing is welcome to contribute, though I plan to remain in control of project management to ensure that we stay focused on our goals. I am certainly open to suggestions and feedback, though!</p>
+
+<p>We are hosting our code on GitHub at <a href="https://github.com/quantum-os">https://github.com/quantum-os</a>, with the Material Design QML framework hosted at <a href="https://github.com/quantum-os/qml-material">https://github.com/quantum-os/qml-material</a>. You can also track our mockups <a href="https://github.com/quantum-os/mockups">here</a>, though because of the flexibility and power of QML, we often work directly in code versus designing mockups first.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Papyros</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Papyros</li>
+          <li><a href="mailto:mspencer@sonrisesoftware.com">mspencer@sonrisesoftware.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/papyros">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">papyros</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

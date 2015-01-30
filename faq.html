@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Frequently Asked Questions</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://papyros.io/faq.html">
+  <link rel="alternate" type="application/rss+xml" title="Papyros" href="http://papyros.io/feed.xml" />
+
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-47662876-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Papyros</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/faq.html">Frequently Asked Questions</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Frequently Asked Questions</h1>
+  </header>
+
+  <article class="post-content">
+    <h3 id="is-this-only-just-a-bunch-of-mockups-or-is-it-a-real-working-os">Is this only just a bunch of mockups or is it a real working OS?</h3>
+
+<p>Yes, we do have real working code and lots of progress is going on. Check out our repositories on GitHub
+at <a href="https://github.com/papyros">https://github.com/papyros</a>.</p>
+
+<h3 id="youre-building-yet-another-desktop-shell-why-not-just-theme-kde">You’re building yet another desktop shell! Why not just theme KDE?</h3>
+
+<p>We’re not building an entire desktop shell from scratch - we’re building a Wayland compositor
+using the QtCompositor APIs, which takes care of most of the work for window management and
+compositing. It’s so easy that a working compositor can be built in 9 files or less. We’ll still
+have to implement the standard indicators and app launching, but we believe that by focusing just
+on wayland and not offering a ton of theming and configuration options, we can build a very small
+desktop shell that works well and has very clean code.</p>
+
+<h3 id="why-build-an-entirely-new-os">Why build an entirely new OS?</h3>
+
+<p>First of all, we aren’t. We will be building on top of an existing Linux distro, Arch Linux.</p>
+
+<p>However, to work well for the typical computer user, we’ll be focusing on an easy-to-use system,
+with stable, reproducable system installs and atomic upgrades. This will most likely be done using
+<a href="https://wiki.gnome.org/action/show/Projects/OSTree">OSTree</a>, which is like Git for operating
+systems.</p>
+
+<p>While this will at least initially limit what you’ll be able to install on the system, our desktop
+shell and other software should work well on any Linux distro that offers the latest packages.</p>
+
+<h3 id="when-is-it-going-to-be-released">When is it going to be released?</h3>
+
+<p>February 30 :)</p>
+
+<p>Seriously, though, we’ll release it when it’s ready, whenever that will be. As work progresses,
+we’ll release instructions for installing packages on top of Arch Linux and also instructions for
+installing via OSTree on top of your current system so you can switch back and fourth without having
+to make a full install to a separate partition.</p>
+
+<p>Then, finally, we’ll release ISOs to install the operating system in a VM or on an actual computer,
+once we have our installer finished.</p>
+
+<h3 id="is-it-going-to-be-a-gnu-free-distro">Is it going to be a GNU free distro?</h3>
+
+<p>Our goal is not to be a pure free-software distro; if you want that, install our apps, shell, and
+login screen on another distro. Our goal is to be the best possible operating system for the typical
+computing user. So, if that means supporting proprietary software such as firmware and drivers, than
+we will support non-free software. And that includes supporting an appstore that supports selling
+proprietary software (if we ever get to that point).</p>
+
+<p>My goal for the OS itself is to focus on an ellegent user experience for the typical computing user.
+This may limit its use for certain use cases (for example, if we use OSTree), or may require that
+we support non-free software. It certainly won’t please everyone. If you don’t like the OS itself,
+go find your own distro and install our packages on top of it.﻿</p>
+
+<p>I’m not developing this operating system to please everyone. I’m developing it as a hobby project
+to fullfill a list of requirements that I’ve put forth, and being an ideal distro that doesn’t
+work for users is not one of them.﻿</p>
+
+<h3 id="so-youre-selling-your-operating-system">So you’re selling your operating system?</h3>
+
+<p>No, we are a completely open-source project, with the code available on GitHub at
+<a href="https://github.com/papyros">https://github.com/papyros</a>, and the operating system will be available at no cost. Our main
+software is licensed under the GPL, while our application framework implementing Material Design is
+LGPL. By not following GNU free distro guidelines, that simply means that we will support the user
+using firmware and drivers that do not have source code and are released under a proprietary license.
+That does not mean that we will be charging for our work.</p>
+
+<p>Instead, once we have more work to show, we will be accepting direct donations and donations via
+bug bounties to pay developers for their time and work. We may also use crowdfunding to cover
+the costs of major new features.</p>
+
+<h3 id="why-dont-you-use-a-bottom-bar-like-windows-or-chrome-os">Why don’t you use a bottom bar, like Windows or Chrome OS?</h3>
+
+<p>There have been several mockups shared with our Google+ community which have a bottom bar, much
+like Chrome OS, and these mockups have generated much interest. Unfortunately, we will not be
+considering actually developing a layout with a Chrome OS-like bottom bar, simply because we are
+already following a similar design language (Material Design), and we do not want Papyros to be
+an exact clone of Chrome OS. In the future, it might be added as a secondary option, but it will
+never become the default.</p>
+
+<h3 id="so-youre-just-another-personproject-crazy-about-all-things-google-and-material-design-in-particular">So, you’re just another person/project crazy about all things Google and Material Design in particular.</h3>
+
+<p>No. I (Michael Spencer, the project manager and lead dev) have been planning on developing an
+operating system for several years now, and have been working on ideas for the OS and reading up
+about people’s thoughts about Linux Desktops in genernal. I actually had started to develop my own
+UI style somewhat similar to the Bootstrap web framework, but then Google announced Material Design
+and I decided just to use that as Material Design looked really nice and it obviously would get
+a lot of support and interest since it came from a big company like Google.</p>
+
+<h3 id="but-youre-using-google-apps">But you’re using Google apps!</h3>
+
+<p>No. Those are just icons and examples used in the mockups and prototypes because we don’t have our
+own apps and icon theme yet. We won’t be actually using Google’s apps in the operating system,
+though they will probably be supported via Chrome.</p>
+
+<h3 id="you-really-plan-to-build-all-the-apps-yourself">You really plan to build all the apps yourself?</h3>
+
+<p>We’ll work with other projects to support existing Gtk/Qt apps using a Material Design theme, but,
+as with any design guidelines, the best apps will be those built to follow the guidelines. So, we
+will build a few core apps ourselves and promote our Material Design framework for building native apps,
+along with supporting web apps via Google’s Polymer web framework.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Papyros</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Papyros</li>
+          <li><a href="mailto:mspencer@sonrisesoftware.com">mspencer@sonrisesoftware.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/papyros">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">papyros</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
