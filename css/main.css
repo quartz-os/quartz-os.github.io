@@ -31,3 +31,7 @@ ul.bullet-list > li {
 .content > ul > li > ul > li {
 	list-style-type: circle;
 }
+
+@media only screen and (max-width : 340px) { 
+	nav .brand-logo {font-size: 1.6rem !important; }
+}
