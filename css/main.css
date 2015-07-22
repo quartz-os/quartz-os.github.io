@@ -2,7 +2,9 @@
     color: #ee6e73;
     font-weight: 300;
 }
-
+nav a {
+  color: #039be5;
+}
 .content > ul {
 	padding-left: 20px;
 	list-style-type: disc;
