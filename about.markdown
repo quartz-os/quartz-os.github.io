@@ -2,6 +2,7 @@
 layout: page
 title: "About"
 order: 1
+permalink: /about/
 ---
 
 Our vision for Papyros is building a Linux operating system that is fun and easy to use for the average user. We're doing this by building an operating system that gets out of the user's way, integrates with cloud services and web technologies, and converges across devices and form factors.
