@@ -2,6 +2,7 @@
 layout: page
 title: "Get Involved"
 order: 5
+permalink: /get-involved/
 ---
 Whether you are a developer, designer, translator, or just a regular user, there are many ways to contribute to Papyros.
 
