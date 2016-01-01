@@ -30,18 +30,17 @@
     </ul>
 
     <ul id="nav-mobile" class="side-nav">
-      {% for page in site.pages %}
-        {% if page.title %}
-        <li><a class="page-link{% if page.url == current_url %} active{% endif %}"
-               href="{{ page.url | prepend: site.baseurl }}">
-            {% if page.short_title %}
-              {{ page.short_title }}
-            {% else %}
-              {{ page.title }}
-            {% endif %}
-        </a></li>
-        {% endif %}
-      {% endfor %}
+      {% for page in sorted_pages %}
+          {% if page.title and page.visible != false %}
+          <li {% if page.url == current_url %}class="active"{% endif %}><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+              {% if page.short_title %}
+                {{ page.short_title }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+          </a></li>
+          {% endif %}
+        {% endfor %}
     </ul>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu grey-text"></i></a>
   </div>
