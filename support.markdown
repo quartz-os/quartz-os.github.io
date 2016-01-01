@@ -2,6 +2,7 @@
 layout: page
 title: "Support"
 order: 6
+permalink: /support/
 ---
 
 You can contact us and get help and support from a variety of resources:
