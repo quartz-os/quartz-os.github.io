@@ -28,10 +28,9 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li><a class="page-link{% if page.url == current_url %} active{% endif %}"
-                 href="{{ page.url | prepend: site.baseurl }}">
+        {% for page in sorted_pages %}
+          {% if page.title and page.visible != false %}
+          <li {% if page.url == current_url %}class="active"{% endif %}><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
               {% if page.short_title %}
                 {{ page.short_title }}
               {% else %}
