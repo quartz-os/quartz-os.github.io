@@ -2,6 +2,7 @@
 layout: page
 title: "Sponsors"
 visible: false
+permalink: /sponsors/
 ---
 
 <div class="row center">
