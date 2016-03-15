@@ -18,7 +18,7 @@ Papyros currently has no commercial funding, and development is done by team mem
       PayPal is a quick and easy solution. Choose a one-time amount or set up a subscription. <a href="https://docs.google.com/spreadsheets/d/1eglrkBnZS1Qmj6vwMYTESDzZF5DJxwQB8I7GqnOFnX0/edit?usp=sharing">View donation report <i class="mdi-navigation-chevron-right" style="vertical-align: -6%"></i></a>
   </div>
   <div class="col s12 m6 l6">
-      <h5>Targetted Funding</h5>
+      <h5>Targeted Funding</h5>
       Bountysource puts funds directly in the hands of developers by rewarding them for committing fixes or creating new features. Set a bounty on the issues that matter to you most or fund a specific app or project. You can also set up a recurring subscription. <a href="https://github.com/bountysource/frontend/wiki/Frequently-Asked-Questions">Learn more <i class="mdi-navigation-chevron-right" style="vertical-align: -6%"></i></a>
   </div>
 </div>
