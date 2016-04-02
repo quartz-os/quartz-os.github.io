@@ -49,9 +49,10 @@ Papyros currently has no commercial funding, and development is done by team mem
    [Material Design app framework](https://github.com/papyros/qml-material) or the
    [desktop shell](https://github.com/papyros/papyros-shell) itself.
  * If you prefer C++, you can help by implementing backends for the desktop shell indicators and
-   other features in the [desktop library](https://github.com/papyros/qml-desktop)
- * If you want to help build the base operating system, including work on using OSTree and xdg-app,
-   check out the [powerpack](https://github.com/papyros/powerpack) repository.
+   other features in the [desktop shell](https://github.com/papyros/papyros-shell) backend.
+ * If you want to help build the advanced app deployment system, including work on using OSTree and xdg-app,
+   check out the [software app](https://github.com/papyros/software-app) repository.
+ * If you're good with Python and want to work on the packaging system, check out                                          [builder](https://github.com/papyros/builder)
 
 #### Translations
 
